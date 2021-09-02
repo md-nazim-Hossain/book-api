@@ -38,7 +38,7 @@ const getBookName = () =>{
 
 // getting data from api
 const getBookApi = bookName =>{
-    const url = `http://openlibrary.org/search.json?q=${bookName}`;
+    const url = `https://openlibrary.org/search.json?q=${bookName}`;
     fetch(url)
     .then(res => res.json())
     .then(data => displayBooks(data))
