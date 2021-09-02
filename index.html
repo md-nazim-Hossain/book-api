@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Archive</title>
+
+    <!-- bootstrap css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        #spinner{
+            display: none;
+        }
+    </style>
+</head>
+<body class="w-75 mx-auto">
+
+    <header>
+        <h3 class="text-center p-3"><span class="text-success">Book </span>Archive</h3>
+    </header>
+    
+    <main>
+        <!-- Book search field -->
+        <div class="input-group mb-3">
+            <input id="search-field" type="text" class="form-control" placeholder="Search By Book Name">
+            <span onclick="getBookName()" class="input-group-text" id="basic-addon2">Search</span>
+        </div>
+
+        <!-- show error message -->
+        <div id="show-error" class="text-center p-3 text-danger"></div>
+
+        <!-- // show spinner -->
+        <div id="spinner" class="pt-5">
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- items not found -->
+        <div id="items-not-found" class="text-center pt-5"></div>
+
+        <!-- show books display -->
+        <div id="items-counter" class="pb-3 text-muted"></div>
+        <div id="show-books" class="row row-cols-1 row-cols-md-3 g-4"></div>
+    </main>
+    
+    <footer>
+
+    </footer>
+    <!-- javscript link tag -->
+    <script src="Js/book.js"></script>
+</body>
+</html>
